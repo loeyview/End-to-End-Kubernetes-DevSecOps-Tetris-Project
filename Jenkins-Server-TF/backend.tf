@@ -1,9 +1,9 @@
 terraform {
   backend "s3" {
-    bucket         = "your-unique-s3-bucket-name"
+    bucket         = "viewko-devops"
     key            = "End-to-End-Kubernetes/Jenkins/terraform.tfstate"
     region         = "ap-southeast-1"
-    dynamodb_table = "your-dynamodb-lock-table"
+    dynamodb_table = "Lockfiles"
     encrypt        = true
   }
   required_version = ">=0.13.0"
